@@ -12,7 +12,7 @@ const [contacts, setContacts] = useState(() => {
   if (savedContact !== null ) {
     return JSON.parse(savedContact)}
 
-    return {}
+    return []
 });
 const [searchContact, setSearchContact] = useState('')
 
