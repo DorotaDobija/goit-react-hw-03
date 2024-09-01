@@ -38,7 +38,7 @@ return prev.filter((contact) =>
   })
 }
 
-const contactToRender = contacts.filter((contact) => contact.name.toLowerCase().includes(searchContact));
+const contactToRender = contacts.filter((contact) => contact.name.toLowerCase().includes(searchContact.toLowerCase()));
 
 
   return (
