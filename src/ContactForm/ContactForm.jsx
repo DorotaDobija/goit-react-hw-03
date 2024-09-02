@@ -10,8 +10,8 @@ export const ContactForm = ({onAdd}) => {
     const numberId = useId();
 
     const ContactFormSchema = Yup.object().shape(
-        {name: Yup.string().min(3, "Too short").max(50, "Too long").required("Required"),
-        number: Yup.string().min(3, "Too short").max(50, "Too long").required("Required"),
+        {name: Yup.string().matches(/^[a-zA-Z]+$/, 'Only letters').min(3, "Too short").max(50, "Too long").required("Required"),
+        number: Yup.string().matches(/^[0-9-]+$/, 'Invalid format').min(3, "Too short").max(50, "Too long").required("Required"),
     }
     )
 
